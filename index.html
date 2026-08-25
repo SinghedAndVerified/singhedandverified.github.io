@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokul Singh — Product Owner</title>
+<meta name="description" content="Product Owner portfolio: 10+ years QA-to-PO delivery experience and the MoneyMitr 0-to-1 case study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,500;0,8..30,600;0,8..30,700;0,8..30,800;0,8..30,900;1,8..30,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#0f1428;
+  --bg-elevated:#161c38;
+  --bg-elevated-2:#1c2344;
+  --text:#f2efe6;
+  --text-soft:#a9adc9;
+  --text-faint:#767c9c;
+  --border:rgba(242,239,230,0.12);
+  --border-strong:rgba(242,239,230,0.22);
+  --accent:#ff7a52;
+  --accent-ink:#3a1608;
+  --teal:#5fc4bb;
+  --gold:#eab749;
+  --sage:#94c08a;
+  --shadow:0 20px 60px -20px rgba(0,0,0,0.55);
+  --radius:14px;
+  --radius-sm:8px;
+  --font-display:'Piazzolla', Georgia, 'Times New Roman', serif;
+  --font-body:'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+  --maxw:1240px;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f5f2ea;
+    --bg-elevated:#ffffff;
+    --bg-elevated-2:#efeade;
+    --text:#171b2e;
+    --text-soft:#4c526c;
+    --text-faint:#7b8098;
+    --border:rgba(23,27,46,0.12);
+    --border-strong:rgba(23,27,46,0.22);
+    --accent:#c8471f;
+    --accent-ink:#ffffff;
+    --teal:#227b73;
+    --gold:#a06a12;
+    --sage:#3f6b3b;
+    --shadow:0 20px 50px -24px rgba(23,27,46,0.25);
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f5f2ea;
+  --bg-elevated:#ffffff;
+  --bg-elevated-2:#efeade;
+  --text:#171b2e;
+  --text-soft:#4c526c;
+  --text-faint:#7b8098;
+  --border:rgba(23,27,46,0.12);
+  --border-strong:rgba(23,27,46,0.22);
+  --accent:#c8471f;
+  --accent-ink:#ffffff;
+  --teal:#227b73;
+  --gold:#a06a12;
+  --sage:#3f6b3b;
+  --shadow:0 20px 50px -24px rgba(23,27,46,0.25);
+  color-scheme: light;
+}
+:root[data-theme="dark"]{
+  --bg:#0f1428;
+  --bg-elevated:#161c38;
+  --bg-elevated-2:#1c2344;
+  --text:#f2efe6;
+  --text-soft:#a9adc9;
+  --text-faint:#767c9c;
+  --border:rgba(242,239,230,0.12);
+  --border-strong:rgba(242,239,230,0.22);
+  --accent:#ff7a52;
+  --accent-ink:#3a1608;
+  --teal:#5fc4bb;
+  --gold:#eab749;
+  --sage:#94c08a;
+  --shadow:0 20px 60px -20px rgba(0,0,0,0.55);
+  color-scheme: dark;
+}
+
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;} }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background .25s ease, color .25s ease;
+}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:700; margin:0; text-wrap:balance;}
+p{margin:0;}
+ul{margin:0; padding:0; list-style:none;}
+table{border-collapse:collapse; width:100%;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  display:flex; align-items:center; gap:10px;
+}
+.eyebrow::before{content:""; width:22px; height:1px; background:var(--accent); display:inline-block;}
+.section{padding:96px 0;}
+.section-head{max-width:640px; margin-bottom:52px; display:flex; flex-direction:column; gap:16px;}
+.section-head h2{font-size:clamp(28px,3.4vw,40px); line-height:1.15;}
+.lede{font-size:17px; color:var(--text-soft); max-width:62ch; line-height:1.7;}
+.divider{border:none; border-top:1px solid var(--border); margin:0;}
+
+/* buttons */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-size:13px; letter-spacing:.03em;
+  padding:13px 22px; border-radius:999px; text-decoration:none;
+  border:1px solid var(--border-strong); transition:all .18s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 24px -10px var(--accent);}
+.btn-ghost{background:transparent; color:var(--text);}
+.btn-ghost:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px);}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:blur(14px) saturate(140%);
+  background:color-mix(in srgb, var(--bg) 78%, transparent);
+  border-bottom:1px solid var(--border);
+}
+.nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
+.nav-brand{font-family:var(--font-display); font-weight:700; font-size:18px; text-decoration:none; display:flex; align-items:center; gap:10px;}
+.nav-brand .mark{width:28px;height:28px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:700;font-size:13px;}
+.nav-links{display:flex; gap:28px; align-items:center;}
+.nav-links a{font-size:14px; text-decoration:none; color:var(--text-soft); transition:color .15s ease;}
+.nav-links a:hover{color:var(--accent);}
+.theme-toggle{
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--border-strong);
+  background:transparent; color:var(--text); cursor:pointer; display:flex;align-items:center;justify-content:center;
+  font-size:15px;
+}
+
+/* ============ HERO ============ */
+.hero{padding:88px 0 64px; position:relative; overflow:hidden;}
+.hero::before{
+  content:"";position:absolute; inset:-20% -10% auto -10%; height:520px;
+  background:radial-gradient(60% 60% at 30% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%),
+             radial-gradient(50% 50% at 80% 0%, color-mix(in srgb, var(--teal) 16%, transparent), transparent 70%);
+  pointer-events:none; z-index:0;
+}
+.hero .wrap{position:relative; z-index:1;}
+.hero-top{display:flex; justify-content:space-between; align-items:flex-start; gap:40px; flex-wrap:wrap;}
+.hero h1{font-size:clamp(34px,5.2vw,58px); line-height:1.08; max-width:22ch; font-weight:700;}
+.hero h1 em{font-style:italic; color:var(--accent); font-weight:500;}
+.hero-copy{margin-top:22px; font-size:18px; color:var(--text-soft); max-width:56ch; line-height:1.7;}
+.hero-actions{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+.hero-meta{
+  font-family:var(--font-mono); font-size:13px; color:var(--text-faint);
+  display:flex; flex-direction:column; gap:6px; text-align:right; padding-top:6px;
+}
+
+/* trajectory roadmap strip */
+.roadmap{margin-top:72px;}
+.roadmap-track{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative;
+}
+.roadmap-track::before{
+  content:""; position:absolute; top:11.5px; left:7.5px; right:calc(33.333% - 7.5px); height:1px;
+  background:linear-gradient(90deg, var(--teal), var(--gold), var(--accent));
+  z-index:0;
+}
+.rm-node{position:relative; padding-top:34px;}
+.rm-dot{position:absolute; top:4px; left:0; width:15px; height:15px; border-radius:50%; border:3px solid var(--bg); box-shadow:0 0 0 1px var(--border-strong); z-index:1;}
+.rm-node:nth-child(1) .rm-dot{background:var(--teal);}
+.rm-node:nth-child(2) .rm-dot{background:var(--gold);}
+.rm-node:nth-child(3) .rm-dot{background:var(--accent);}
+.rm-year{font-family:var(--font-mono); font-size:12px; color:var(--text-faint); letter-spacing:.05em;}
+.rm-title{font-family:var(--font-display); font-weight:700; font-size:19px; margin-top:4px;}
+.rm-sub{font-size:13.5px; color:var(--text-soft); margin-top:4px; max-width:26ch;}
+
+/* stat row */
+.statline{display:flex; flex-wrap:wrap; gap:0; margin-top:64px; border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+.statline .stat{flex:1 1 160px; padding:22px 20px; border-right:1px solid var(--border);}
+.statline .stat:last-child{border-right:none;}
+.stat-num{font-family:var(--font-mono); font-size:26px; font-weight:600; color:var(--accent); font-variant-numeric:tabular-nums;}
+.stat-label{font-size:12.5px; color:var(--text-faint); margin-top:4px; letter-spacing:.02em;}
+
+/* ============ CARDS / GRID ============ */
+.card{
+  background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius);
+  padding:28px; box-shadow:var(--shadow);
+}
+.grid{display:grid; gap:20px;}
+.grid-2{grid-template-columns:1fr 1fr;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+
+/* pull quote */
+.quote{
+  border-left:2px solid var(--accent); padding:6px 0 6px 26px; margin:36px 0;
+}
+.quote p{font-family:var(--font-display); font-style:italic; font-size:22px; line-height:1.5; color:var(--text);}
+.quote cite{display:block; margin-top:12px; font-style:normal; font-family:var(--font-mono); font-size:12.5px; color:var(--text-faint);}
+
+/* figure / exhibit */
+.exhibit{border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow);}
+.exhibit img{width:100%;}
+.exhibit-cap{padding:14px 18px; background:var(--bg-elevated); font-family:var(--font-mono); font-size:12px; color:var(--text-faint); border-top:1px solid var(--border);}
+
+/* tables */
+.tbl{font-size:14.5px;}
+.tbl th{
+  text-align:left; font-family:var(--font-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--text-faint); padding:10px 14px; border-bottom:1px solid var(--border-strong); font-weight:600;
+}
+.tbl td{padding:14px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--text-soft);}
+.tbl td.k{color:var(--text); font-weight:600;}
+.tbl-wrap{overflow-x:auto; border-radius:var(--radius); border:1px solid var(--border);}
+.tbl-wrap table{min-width:640px;}
+.tbl-wrap .tbl th, .tbl-wrap .tbl td{border-color:var(--border);}
+
+.badge{display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:11.5px; padding:4px 10px; border-radius:999px; border:1px solid var(--border-strong);}
+.badge.on{color:var(--sage); border-color:color-mix(in srgb, var(--sage) 50%, var(--border-strong));}
+.badge.part{color:var(--gold); border-color:color-mix(in srgb, var(--gold) 50%, var(--border-strong));}
+.badge.off{color:var(--text-faint);}
+
+/* details / accordion */
+details{border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--bg-elevated); overflow:hidden;}
+details + details{margin-top:10px;}
+summary{
+  cursor:pointer; padding:16px 18px; font-family:var(--font-mono); font-size:13.5px;
+  list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px;
+  color:var(--text);
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+"; font-size:18px; color:var(--accent); transition:transform .2s ease;}
+details[open] summary::after{transform:rotate(45deg);}
+.details-body{padding:0 18px 18px; color:var(--text-soft); font-size:14.5px; line-height:1.7;}
+
+/* tags */
+.tags{display:flex; flex-wrap:wrap; gap:8px;}
+.tag{
+  font-family:var(--font-mono); font-size:12px; padding:6px 12px; border-radius:999px;
+  border:1px solid var(--border-strong); color:var(--text-soft);
+}
+
+/* footer */
+footer{padding:56px 0 80px; border-top:1px solid var(--border);}
+footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+footer p{font-family:var(--font-mono); font-size:12.5px; color:var(--text-faint);}
+
+/* misc */
+.split{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+.num{font-family:var(--font-mono); color:var(--text-faint); font-size:13px;}
+.h-scroll{overflow-x:auto;}
+.svg-chart{width:100%; height:auto; display:block;}
+.chart-card{padding:24px 24px 18px;}
+.chart-title{font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-faint); margin-bottom:18px;}
+.legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-family:var(--font-mono); font-size:12px; color:var(--text-soft);}
+.legend span{display:inline-flex; align-items:center; gap:6px;}
+.legend i{width:10px;height:10px;border-radius:3px; display:inline-block;}
+
+/* Desktop/laptop only — no mobile breakpoints by design; the page assumes a viewport ≥1024px. */
+body{min-width:1040px;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="nav-brand"><span class="mark">GS</span> Gokul Singh</a>
+    <div class="nav-links" id="navLinks">
+      <a href="./moneymitr-case-study.html" target="_blank" rel="noopener">Case Study</a>
+      <a href="#about">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <span class="eyebrow">Product Owner · 0-to-1 Product Strategy</span>
+        <h1 style="margin-top:18px;">Ten years of learning where software breaks impact product experience. <em>Now I help shape strategy to improve products.</em></h1>
+        <p class="hero-copy">I'm a Product Owner with 10+ years of Agile delivery experience across Insurance, Banking, Healthcare, and Travel &amp; Aviation at Accenture and TCS — and, more recently, took the founding concept of an AI-powered personal finance app called “<strong style="color:var(--text)">MoneyMitr</strong>”, which I took from a blank page through research, MVP scope, business model, and launch planning on my own.</p>
+        <div class="hero-actions">
+          <a href="./moneymitr-case-study.html" target="_blank" rel="noopener" class="btn btn-primary">Explore the MoneyMitr case study →</a>
+          <a href="#about" class="btn btn-ghost">Résumé</a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span>Pune, India</span>
+        <span>0-to-1 Product Owner &amp; Strategist</span>
+        <span>10+ yrs delivery</span>
+        <span>Integrating AI into PO and QA processes</span>
+      </div>
+    </div>
+
+    <div class="roadmap">
+      <div class="roadmap-track">
+        <div class="rm-node">
+          <div class="rm-dot"></div>
+          <div class="rm-year">2015 – 2020</div>
+          <div class="rm-title">QA → curiosity in product</div>
+          <div class="rm-sub">TCS &amp; Accenture · test planning, automation, and a growing itch to shape requirements, not just verify them.</div>
+        </div>
+        <div class="rm-node">
+          <div class="rm-dot"></div>
+          <div class="rm-year">2020 – 2026</div>
+          <div class="rm-title">Embedded PO track</div>
+          <div class="rm-sub">Accenture × Saudia Airlines — user stories, design review, stakeholder ownership inside a SAFe Agile team.</div>
+        </div>
+        <div class="rm-node">
+          <div class="rm-dot"></div>
+          <div class="rm-year">2026 – ongoing</div>
+          <div class="rm-title">Founding concept, MoneyMitr</div>
+          <div class="rm-sub">0-to-1: vision, research, MVP scope, business model, and launch readiness — solo, end to end.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statline">
+      <div class="stat"><div class="stat-num">10+ yrs</div><div class="stat-label">Agile delivery experience</div></div>
+      <div class="stat"><div class="stat-num">7–9</div><div class="stat-label">Engineers led within a team that also performed cross functional collaborations when needed</div></div>
+      <div class="stat"><div class="stat-num">1</div><div class="stat-label">Founding concept researched, estimated, scoped &amp; planned to its launching phase</div></div>
+      <div class="stat"><div class="stat-num">15</div><div class="stat-label">Survey respondents for the founding concept case study</div></div>
+      <div class="stat"><div class="stat-num">10</div><div class="stat-label">User interviews conducted for better insights</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<hr class="divider">
+
+<!-- ================= ABOUT / RESUME ================= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2>QA analyst → embedded product owner → 0-to-1 product strategist</h2>
+      <p class="lede">Ten years of Agile delivery across Insurance, Banking, Healthcare, and Travel &amp; Aviation gave me a quality-first instinct for where products actually break. Since 2020 I've been building the product-owner half of that instinct on a live enterprise engagement — and since 2026, applying both halves solo on MoneyMitr.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:0;">
+      <div class="card" style="border-radius:var(--radius) var(--radius) 0 0; border-bottom:none;">
+        <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+          <h3 style="font-size:19px;">Founding product owner — MoneyMitr (0-to-1 research, concept &amp; product strategy)</h3>
+          <span class="num">Independent · Ongoing</span>
+        </div>
+        <ul style="margin-top:14px; display:flex; flex-direction:column; gap:8px; font-size:14.5px; color:var(--text-soft);">
+          <li>Founded and independently built an AI-powered personal finance app strategy end to end, from concept through build.</li>
+          <li>Defined product vision, scoped and prioritized the MVP as a solo product owner, and made the UX/UI decisions shaping the core experience.</li>
+          <li>Iterated on the product through a continuous, feedback-driven discovery approach.</li>
+        </ul>
+      </div>
+      <div class="card" style="border-radius:0; border-bottom:none;">
+        <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+          <h3 style="font-size:19px;">Test Engineering Senior Analyst — Accenture <span style="font-weight:400; color:var(--text-faint); font-size:14px;">(Client: Saudia Airlines, Travel &amp; Aviation)</span></h3>
+          <span class="num">Dec 2020 – Feb 2026</span>
+        </div>
+        <p style="margin-top:6px; font-size:13px; color:var(--accent); font-family:var(--font-mono);">Product Owner track, embedded within the role</p>
+        <ul style="margin-top:14px; display:flex; flex-direction:column; gap:8px; font-size:14.5px; color:var(--text-soft);">
+          <li>Authored and refined user stories for airline/travel-domain workflows, ensuring clarity, testability, and alignment with business intent before stories reached development.</li>
+          <li>Reviewed design and UX specifications early in the cycle to flag inconsistencies and usability gaps before they entered the sprint.</li>
+          <li>Owned stakeholder communication and meeting cadence — coordinating with the client, business analysts, and development teams.</li>
+          <li>Applied AI-augmented QA techniques to systematically analyze edge cases and acceptance-criteria gaps.</li>
+          <li>Led a QA team of 7–9 as backup team lead — onboarding interviews, daily RAG status reports, stakeholder calls.</li>
+        </ul>
+      </div>
+      <div class="card" style="border-radius:0; border-bottom:none;">
+        <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+          <h3 style="font-size:19px;">Test Engineering Analyst — Accenture</h3>
+          <span class="num">Jul 2019 – Dec 2020</span>
+        </div>
+        <ul style="margin-top:14px; display:flex; flex-direction:column; gap:8px; font-size:14.5px; color:var(--text-soft);">
+          <li>Test planning, case authoring from BRDs and user stories, and end-to-end execution across Insurance and Banking platforms — UI and REST API coverage.</li>
+          <li>Awarded Accenture's iChamp Award for outstanding quality contributions.</li>
+          <li>Acted as backup lead in the team lead's absence; developed a growing interest in product ownership and proactively pursued a transition path toward product-aligned responsibilities.</li>
+        </ul>
+      </div>
+      <div class="card" style="border-radius:0 0 var(--radius) var(--radius);">
+        <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline;">
+          <h3 style="font-size:19px;">QA roles — Tata Consultancy Services</h3>
+          <span class="num">Nov 2015 – Jul 2019</span>
+        </div>
+        <ul style="margin-top:14px; display:flex; flex-direction:column; gap:8px; font-size:14.5px; color:var(--text-soft);">
+          <li>System Engineer (Nov 2017 – Jul 2019) — led QA teams of up to 5 in Banking &amp; Finance; presented QA metrics (defect closure, re-open rates, leakage) directly to stakeholders.</li>
+          <li>Assistant System Engineer / Trainee (Nov 2015 – Oct 2017) — functional and regression testing in Healthcare; managed change requests end to end with development and BA teams.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:64px;">
+      <span class="eyebrow">Skills</span>
+      <h2 style="font-size:28px;">Product instincts, Agile discipline, technical fluency</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:12px;">Product &amp; strategy</div>
+        <div class="tags">
+          <span class="tag">Product Vision &amp; Strategy</span>
+          <span class="tag">0-to-1 Development</span>
+          <span class="tag">MVP Definition</span>
+          <span class="tag">Roadmapping</span>
+          <span class="tag">User Stories &amp; AC</span>
+          <span class="tag">UX Decision-Making</span>
+          <span class="tag">User Research</span>
+          <span class="tag">A/B Testing</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:12px;">Agile &amp; delivery</div>
+        <div class="tags">
+          <span class="tag">SAFe Agile</span>
+          <span class="tag">PI Planning</span>
+          <span class="tag">Backlog Grooming</span>
+          <span class="tag">Stakeholder Comms</span>
+          <span class="tag">Cross-functional Leadership</span>
+          <span class="tag">Requirements Elicitation</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:12px;">Technical</div>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Postman / API Testing</span>
+          <span class="tag">JIRA · Confluence</span>
+          <span class="tag">Zephyr · TM4J</span>
+          <span class="tag">AI-Augmented Workflows</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top:56px;">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px;">Certifications</div>
+        <ul style="display:flex; flex-direction:column; gap:10px; font-size:14.5px; color:var(--text-soft);">
+          <li><strong style="color:var(--text);">ISTQB Foundation Level</strong></li>
+          <li><strong style="color:var(--text);">Master Product Management</strong> — by actually building a product · Udemy, 17 hrs</li>
+          <li>People Leadership Credential — Chapters 1–3 (Connect, Develop, Empower) · Accenture, 2024</li>
+          <li>Foundations of Agile Project Management · Google</li>
+          <li>AI Fundamentals · AI for Brainstorming &amp; Planning · AI for Research &amp; Insights · Google</li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px;">Education</div>
+        <p style="font-size:14.5px; color:var(--text-soft);"><strong style="color:var(--text);">B.Tech, Electrical Engineering</strong><br>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal · 2015</p>
+        <div class="eyebrow" style="margin:22px 0 14px;">Self-directed</div>
+        <p style="font-size:14.5px; color:var(--text-soft);">Independently explored <strong style="color:var(--text);">Maestro</strong> mobile UI automation — authoring end-to-end iOS Simulator test flows outside a formal work setting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<div class="section" style="padding:56px 0;">
+  <div class="wrap" style="text-align:center;">
+    <a href="./resume.html" target="_blank" rel="noopener" class="btn btn-ghost">View full résumé →</a>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="card" style="padding:48px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:22px;">
+      <span class="eyebrow">Get in touch</span>
+      <h2 style="font-size:clamp(26px,3.6vw,36px); max-width:20ch;">Building 0-to-1, or reviewing quality at scale — happy to talk about either.</h2>
+      <div class="hero-actions">
+        <a href="mailto:nair.gokul1993@gmail.com" class="btn btn-primary">nair.gokul1993@gmail.com</a>
+        <a href="https://www.linkedin.com/in/singhed-and-verified/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+        <a href="tel:+919703516626" class="btn btn-ghost">+91 97035 16626</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Gokul Singh · Product Owner</p>
+    <p>Built as a portfolio of original PO &amp; QA work · <span id="year"></span></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // theme toggle: cycles system -> light -> dark -> system
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  function applyStoredTheme(){
+    try{
+      var t = localStorage.getItem('gs-theme');
+      if(t === 'light' || t === 'dark'){ root.setAttribute('data-theme', t); }
+    }catch(e){}
+  }
+  applyStoredTheme();
+  themeToggle.addEventListener('click', function(){
+    var current = root.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : (current === 'light' ? null : 'dark');
+    if(next){ root.setAttribute('data-theme', next); } else { root.removeAttribute('data-theme'); }
+    try{
+      if(next){ localStorage.setItem('gs-theme', next); } else { localStorage.removeItem('gs-theme'); }
+    }catch(e){}
+  });
+</script>
+
+</body>
+</html>
