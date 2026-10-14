@@ -1,2 +1,2 @@
 # singhedandverified.github.io
-G's portfolio showcasing PO &amp; QA work worth 10 years in the industry
+G's portfolio showcasing his work worth 10 years in the industry
